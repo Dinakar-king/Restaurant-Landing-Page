@@ -1,0 +1,123 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  margin-right: 10px;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a.active, nav a:hover {
+  color: #f8c44f;
+}
+
+.hero {
+  background: url('https://source.unsplash.com/1600x600/?restaurant') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #f8c44f;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menu-grid, .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+div.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.social-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+}
+
+.social-footer a {
+  color: white;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}

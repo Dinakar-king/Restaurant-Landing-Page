@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservation - Fine Dine</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Fine Dine</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="reservation.html" class="active">Reservation</a>
+      <a href="location.html">Location</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="reservation-section">
+      <h1>Book Your Table</h1>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+        <label for="time">Time:</label>
+        <input type="time" id="time" required>
+        <label for="guests">Guests:</label>
+        <select id="guests">
+          <option>1</option>
+          <option>2</option>
+          <option>3–4</option>
+          <option>5+</option>
+        </select>
+        <button type="submit">Confirm Reservation</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
