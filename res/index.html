@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fine Dine Experience</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/restaurant.png" alt="Logo" />
+      Fine Dine
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#menuSection" id="menuLink">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reservation">Reservation</a>
+      <a href="#location">Location</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Welcome to the Fine Dine Experience</h1>
+      <p>Immerse yourself in a world of flavor, ambiance, and unforgettable dining moments.</p>
+      <button class="btn" id="bookBtn">Book a Table</button>
+    </section>
+
+    <section id="menuSection">
+      <h2>Our Menu</h2>
+      <div class="filter-buttons">
+        <button class="tabBtn" data-category="starters">Starters</button>
+        <button class="tabBtn" data-category="beverages">Beverages</button>
+        <button class="tabBtn" data-category="desserts">Desserts</button>
+        <button class="tabBtn" data-category="icecreams">Ice Creams</button>
+      </div>
+      <div id="menuItems" class="menu-grid"></div>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="https://source.unsplash.com/300x200/?restaurant,dining" alt="Dining area" />
+        <img src="https://source.unsplash.com/300x200/?restaurant,interior" alt="Interior" />
+        <img src="https://source.unsplash.com/300x200/?restaurant,food" alt="Food presentation" />
+        <img src="https://source.unsplash.com/300x200/?restaurant,chef" alt="Chef" />
+      </div>
+    </section>
+
+    <section id="reservation">
+      <h2>Reservation Info</h2>
+      <p>We welcome walk-ins, but for guaranteed seating, please book your table in advance using the button above or visit our location.</p>
+    </section>
+
+    <section id="location">
+      <h2>Our Location</h2>
+      <p>123 Gourmet Street, Food City, FL 12345</p>
+      <iframe src="https://maps.google.com/maps?q=New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <section id="blog">
+      <h2>From Our Blog</h2>
+      <article class="blog-post">
+        <h3>The Art of Plating: Behind the Scenes</h3>
+        <p>Discover how our chefs craft visual masterpieces before your dish even reaches the table.</p>
+      </article>
+      <article class="blog-post">
+        <h3>Top 5 Customer Favorites This Month</h3>
+        <p>From spicy starters to mouthwatering desserts — here's what our guests are loving.</p>
+      </article>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:contact@finedine.com">contact@finedine.com</a></p>
+      <p>Phone: +1 (555) 123-4567</p>
+      <p>Hours: Mon–Sun: 10:00 AM – 11:00 PM</p>
+    </section>
+  </main>
+
+  <div class="social-footer">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <div class="modal" id="reservationModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Book a Table</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your Name" required />
+        <label for="date">Date:</label>
+        <input type="date" id="date" required />
+        <label for="time">Time:</label>
+        <input type="time" id="time" required />
+        <label for="guests">Guests:</label>
+        <select id="guests" required>
+          <option value="">Select</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3-4">3–4</option>
+          <option value="5+">5+</option>
+        </select>
+        <button type="submit">Confirm Reservation</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
