@@ -4,116 +4,134 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fine Dine Experience</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Navbar -->
   <header>
-    <div class="logo">
+     <div class="logo">
       <img src="https://img.icons8.com/ios-filled/50/ffffff/restaurant.png" alt="Logo" />
       Fine Dine
     </div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#menuSection" id="menuLink">Menu</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#reservation">Reservation</a>
-      <a href="#location">Location</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact">Contact</a>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reservation">Reservation</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#location">Location</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>Welcome to the Fine Dine Experience</h1>
-      <p>Immerse yourself in a world of flavor, ambiance, and unforgettable dining moments.</p>
-      <button class="btn" id="bookBtn">Book a Table</button>
-    </section>
+  <!-- Hero Section -->
+  <section id="home">
+    <div class="overlay">
+      <h1>Welcome to Fine Dine</h1>
+      <p>Your delicious journey starts here!</p>
+    </div>
+  </section>
 
-    <section id="menuSection">
-      <h2>Our Menu</h2>
-      <div class="filter-buttons">
-        <button class="tabBtn" data-category="starters">Starters</button>
-        <button class="tabBtn" data-category="beverages">Beverages</button>
-        <button class="tabBtn" data-category="desserts">Desserts</button>
-        <button class="tabBtn" data-category="icecreams">Ice Creams</button>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We serve the best food in town using fresh ingredients and exceptional service.</p>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <h3>Margherita Pizza</h3>
+        <p>Classic Italian pizza with fresh basil</p>
+        <span>$12</span>
       </div>
-      <div id="menuItems" class="menu-grid"></div>
-    </section>
-
-    <section id="gallery">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <img src="https://source.unsplash.com/300x200/?restaurant,dining" alt="Dining area" />
-        <img src="https://source.unsplash.com/300x200/?restaurant,interior" alt="Interior" />
-        <img src="https://source.unsplash.com/300x200/?restaurant,food" alt="Food presentation" />
-        <img src="https://source.unsplash.com/300x200/?restaurant,chef" alt="Chef" />
+      <div class="menu-card">
+        <h3>Spaghetti Carbonara</h3>
+        <p>Rich creamy sauce with pancetta</p>
+        <span>$14</span>
       </div>
-    </section>
+      <div class="menu-card">
+        <h3>Grilled Chicken</h3>
+        <p>Served with vegetables and garlic sauce</p>
+        <span>$15</span>
+      </div>
+    </div>
+  </section>
 
-    <section id="reservation">
-      <h2>Reservation Info</h2>
-      <p>We welcome walk-ins, but for guaranteed seating, please book your table in advance using the button above or visit our location.</p>
-    </section>
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://b.zmtcdn.com/data/pictures/chains/2/19806352/76bdadc0ce6fa562d0189b228d2d1805.jpeg?fit=around|960:500&crop=960:500;*,*" alt="Food 1" />
+      <img src="https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/yw03fqv01tlzpu6ipt3z" alt="Food 2" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEmvUHufc2U9RHuFIsaiR9UoC5ZR_rSv9oqg&s" alt="Ambience" />
+    </div>
+  </section>
 
-    <section id="location">
-      <h2>Our Location</h2>
-      <p>123 Gourmet Street, Food City, FL 12345</p>
-      <iframe src="https://maps.google.com/maps?q=New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
-    </section>
+  <!-- Reservation Section -->
+  <section id="reservation">
+    <h2>Make a Reservation</h2>
+    <form class="reservation-form">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="tel" placeholder="Phone Number" required />
+      <input type="date" required />
+      <input type="time" required />
+      <input type="number" placeholder="Guests" min="1" max="20" required />
+      <textarea placeholder="Special Requests (Optional)"></textarea>
+      <button type="submit">Reserve Table</button>
+    </form>
+  </section>
 
-    <section id="blog">
-      <h2>From Our Blog</h2>
-      <article class="blog-post">
-        <h3>The Art of Plating: Behind the Scenes</h3>
-        <p>Discover how our chefs craft visual masterpieces before your dish even reaches the table.</p>
-      </article>
-      <article class="blog-post">
-        <h3>Top 5 Customer Favorites This Month</h3>
-        <p>From spicy starters to mouthwatering desserts — here's what our guests are loving.</p>
-      </article>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Email: <a href="mailto:contact@finedine.com">contact@finedine.com</a></p>
-      <p>Phone: +1 (555) 123-4567</p>
-      <p>Hours: Mon–Sun: 10:00 AM – 11:00 PM</p>
-    </section>
-  </main>
-
-  <div class="social-footer">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-youtube"></i></a>
-  </div>
-
-  <div class="modal" id="reservationModal">
-    <div class="modal-content">
-      <span class="close" id="closeModal">&times;</span>
-      <h2>Book a Table</h2>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" placeholder="Your Name" required />
-        <label for="date">Date:</label>
-        <input type="date" id="date" required />
-        <label for="time">Time:</label>
-        <input type="time" id="time" required />
-        <label for="guests">Guests:</label>
-        <select id="guests" required>
-          <option value="">Select</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3-4">3–4</option>
-          <option value="5+">5+</option>
-        </select>
-        <button type="submit">Confirm Reservation</button>
-      </form>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <!-- Blog Section -->
+<section id="blog">
+  <h2>Our Blog</h2>
+  <div class="blog-posts">
+    <div class="post">
+      <h3>5 Must-Try Dishes at Fine Dine</h3>
+      <p>Discover our most popular dishes loved by customers.</p>
+      <a href="#">Read More →</a>
+    </div>
+    <div class="post">
+      <h3>Chef’s Special for the Month</h3>
+      <p>Explore what our head chef has prepared this season.</p>
+      <a href="#">Read More →</a>
     </div>
   </div>
+</section>
+
+<!-- Location Section -->
+<section id="location">
+  <h2>Find Us</h2>
+  <p>123 Foodie Lane, Flavor Town, India</p>
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.842238488282!2d73.85674387520257!3d19.0760958821085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c088ccf5e3d7%3A0xa2f78699156ed1f3!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1689686945012!5m2!1sen!2sin"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Fine Dine Restaurant. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
